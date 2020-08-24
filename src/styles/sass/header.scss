@@ -9,7 +9,34 @@ header {
     .nav{
         color: $textColor;
         display: flex;
-        &__menu{
+        &__items{
+            display: flex;
+            margin-right: 100px;
+            .nav__item{
+                transition: font-size 2s;
+                display: flex;
+                .nav__search{
+                    width: 0;
+                    border: none;
+                    transition: width 2s;
+                }
+                i{  
+                    cursor: pointer;
+                    width: 60px;
+                    height: 30px;
+                    &:hover{
+                        font-size: 24px;
+                        width: 57px;
+                    }
+                }
+                span{
+                    color: $white;
+                    display: block;
+                }
+    
+            }
+        }
+        &__burger{
             transform: translateX(-10px);
             cursor: pointer;
             transition: all .5s;
@@ -56,31 +83,6 @@ header {
                 right: 0;
             }
         }
-        &__items{
-            display: flex;
-            margin-right: 100px;
-        }
-        &__icon{
-            transition: font-size 2s;
-            display: flex;
-            .nav__search{
-                width: 0;
-            }
-            i{  
-                cursor: pointer;
-                width: 60px;
-                height: 30px;
-                &:hover{
-                    font-size: 24px;
-                    width: 57px;
-                }
-            }
-            span{
-                color: $white;
-                display: block;
-            }
-
-        }
     }
 }
 
@@ -93,7 +95,7 @@ header {
 }
 
 
-.menu-hover{
+.menu-click{
     width: 30px !important;
     height: 30px !important;
     transform: translateX(-5px) !important;
@@ -103,5 +105,11 @@ header {
 }
 
 .search-click{
-    width: 100px;
+    width: 200px !important;
+}
+
+.nav-items-hide{
+    width: 0;
+    margin: 0 !important;
+    overflow: hidden;
 }

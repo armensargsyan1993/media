@@ -1,6 +1,10 @@
 .main{
     overflow: hidden;
+    margin-top: 40px;
     .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     .global-text{
         position: absolute;
@@ -24,5 +28,22 @@
             bottom: 80px;
         }
     
+    }
+
+    .left-aside,
+    .right-aside{
+        height: 400px;
+        width: 100px;
+        border: 1px solid red;
+    }
+
+    .left-aside{
+        &>span{
+            display: block;
+            width: 40px;
+            height: 40px;
+            border: 1px solid $textColor;
+            border-radius: 50%;
+        }
     }
 }
