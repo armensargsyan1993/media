@@ -1,3 +1,4 @@
+
 .main{
     overflow: hidden;
     margin-top: 40px;
@@ -32,18 +33,88 @@
 
     .left-aside,
     .right-aside{
-        height: 400px;
+        padding: 70px 25px;
         width: 100px;
         border: 1px solid red;
     }
 
     .left-aside{
+        @for $i from 1 to length($colors)+1 {
+            span:nth-child(#{$i}) span {
+                background-color:nth($colors,$i)
+        }
+    }
         &>span{
-            display: block;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 40px;
             height: 40px;
-            border: 1px solid $textColor;
+            border: 1px solid transparent;
             border-radius: 50%;
+            &>span{
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            &:hover{
+                border: 1px solid $textColor;
+            }
+        }
+    }
+    .content{
+        left: -100px;
+        position: relative;
+        h1{
+            text-transform: uppercase;
+            font-size: 250px;
+            font-weight: bold;
+            letter-spacing: -100px;
+            line-height: 180px;
+            -webkit-text-stroke:2px $textColor;
+            color: grey;
+            &>*{
+                position: relative;
+            }
+            @for $i from 1 to $lettersCount {
+                span:nth-child(#{$i}){
+                    z-index: -$i;
+                }
+            }
+        }
+        svg{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: -30px;
+            right: -300px;
+            fill: white;
+        }
+    }
+    .right-aside{
+        .slider{
+            overflow: hidden;
+            height: 600px;
+            border: 1px solid red;
+            .arrow-top,.arrow-bottom{
+                display: block;
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                background-color: indigo;
+            }
+            .arrow-top{
+                top: 0;
+            }
+            .arrow-bottom{
+                bottom: 0;
+            }
+            .slider-container{
+                height: 9999px;
+            }
         }
     }
 }

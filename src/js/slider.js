@@ -1,5 +1,6 @@
-// document.body.insertAdjacentHTML('beforeend', `
-// <svg viewBox="0 0 640 640">
-//     <use xlink:href="./components/svgIcons/first5.svg#mii"></use>
-//  </svg>
-// `)
+let sliderContainer = document.querySelector('.slider-container')
+document.querySelector('.slider').addEventListener('click', e => {
+     if(e.target.classList.contains('arrow-top')){
+         sliderContainer.style.cssText = `transform:translateY(-100px)`
+     }
+})

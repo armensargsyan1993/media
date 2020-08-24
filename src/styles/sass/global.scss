@@ -1,5 +1,11 @@
 $textColor: #00eaff;
 $white: #fff;
+$bgColor: #000824;
+
+$colors: red,blue,green,yellow,black;
+$lettersCount: 12;
+
+
 
 
 *,*:before,*:after{
@@ -10,7 +16,7 @@ $white: #fff;
     outline: none;
 }
 body{
-    background-color: #000824;
+    background-color: $bgColor;
     color: white;
 }
 
