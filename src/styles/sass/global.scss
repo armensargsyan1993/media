@@ -2,8 +2,12 @@ $textColor: #00eaff;
 $white: #fff;
 $bgColor: #000824;
 
-$colors: red,blue,green,yellow,black;
 $lettersCount: 12;
+$colors: rgba(255, 0, 0, 0.7),
+rgba(0, 0, 255, 0.7),
+rgba(0, 128, 0, 0.7),
+rgba(255, 255, 4, 0.7),
+rgba(0, 0, 0, 0.7);
 
 
 
@@ -24,7 +28,6 @@ body{
     position: relative;
     margin: 0 auto;
     max-width: 1000px;
-    border: 1px solid yellow;
     height: 100%;
 }
 
